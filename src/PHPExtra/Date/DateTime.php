@@ -6,7 +6,7 @@ use DateTime as StandardDateTime;
 use DateTimeZone;
 
 /**
- * Class DateTime
+ * DateTime
  *
  * @author Jacek Kobus <kobus.jacek@gmail.com>
  */
@@ -16,8 +16,6 @@ class DateTime extends StandardDateTime
      * @var Closure
      */
     public static $now = null;
-
-    const HOUR = 'h';
 
     /**
      * Dafeault format
@@ -41,6 +39,22 @@ class DateTime extends StandardDateTime
     public static function now()
     {
         return new self();
+    }
+
+    /**
+     * @return $this
+     */
+    public static function tomorrow()
+    {
+        return new self('tomorrow');
+    }
+
+    /**
+     * @return $this
+     */
+    public static function yesterday()
+    {
+        return new self('yesterday');
     }
 
     /**
@@ -129,15 +143,36 @@ class DateTime extends StandardDateTime
         return $this->format('t');
     }
 
+    /**
+     * @return string
+     */
     public function getDayOfMonth()
     {
         return $this->format('j');
     }
 
-    public function getDayOfWeek(){}
+    /**
+     * @return string
+     */
+    public function getDayOfWeek()
+    {
+        return $this->format('N');
+    }
 
-    public function getDayOfYear(){}
+    /**
+     * @return string
+     */
+    public function getDayOfYear()
+    {
+        return $this->format('Z');
+    }
 
-    public function getWeekOfYear(){}
+    /**
+     * @return string
+     */
+    public function getWeekOfYear()
+    {
+        return $this->format('W');
+    }
 
 }
