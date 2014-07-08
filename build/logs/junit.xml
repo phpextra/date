@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="./tests/fixtures" tests="8" assertions="48" failures="0" errors="0" time="0.038427">
+    <testsuite name="fixtures\PHPExtra\Date\DateIntervalTest" file="C:\Projects\date\tests\fixtures\PHPExtra\Date\DateIntervalTest.php" namespace="fixtures\PHPExtra\Date" fullPackage="fixtures.PHPExtra.Date" tests="8" assertions="48" failures="0" errors="0" time="0.038427">
+      <testsuite name="fixtures\PHPExtra\Date\DateIntervalTest::testCanCreateFromMinutes" tests="4" assertions="24" failures="0" errors="0" time="0.024256">
+        <testcase name="testCanCreateFromMinutes with data set #0" assertions="6" time="0.013281"/>
+        <testcase name="testCanCreateFromMinutes with data set #1" assertions="6" time="0.003765"/>
+        <testcase name="testCanCreateFromMinutes with data set #2" assertions="6" time="0.003667"/>
+        <testcase name="testCanCreateFromMinutes with data set #3" assertions="6" time="0.003543"/>
+      </testsuite>
+      <testsuite name="fixtures\PHPExtra\Date\DateIntervalTest::testCanCreateFromSeconds" tests="4" assertions="24" failures="0" errors="0" time="0.014171">
+        <testcase name="testCanCreateFromSeconds with data set #0" assertions="6" time="0.003612"/>
+        <testcase name="testCanCreateFromSeconds with data set #1" assertions="6" time="0.003575"/>
+        <testcase name="testCanCreateFromSeconds with data set #2" assertions="6" time="0.003447"/>
+        <testcase name="testCanCreateFromSeconds with data set #3" assertions="6" time="0.003537"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

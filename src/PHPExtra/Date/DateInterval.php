@@ -64,7 +64,7 @@ class DateInterval extends \DateInterval
 
         foreach($lengths as $length)
         {
-            $data[$length[0]] = $value/$length[1];
+            $data[$length[0]] = (int)$value/$length[1];
             $value %= $length[1];
         }
 
