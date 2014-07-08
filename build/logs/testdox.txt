@@ -1,4 +1,0 @@
-fixtures\PHPExtra\Date\DateInterval
- [x] Can create from minutes
- [x] Can create from seconds
-
