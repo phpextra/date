@@ -81,4 +81,20 @@ class DateInterval extends \DateInterval
     {
         return static::fromSeconds($value*60);
     }
+
+    /**
+     * Format @see DateInterval to string, like: 6h25min or 15min. Works for intervals less than 24h.
+     *
+     * @return string
+     */
+    public function formatHours()
+    {
+        $ret = '';
+        if($this->h > 0) {
+            $ret .= $this->h . 'h';
+        }
+        $ret .= $this->i . 'min';
+
+        return $ret;
+    }
 }
