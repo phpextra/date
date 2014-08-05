@@ -18,11 +18,11 @@
         "phpextra/qa-tools": "~1.0"
     },
     "archive": {
-        "exclude": ["/build", "/tests", "phpunit.bat", "fixer.bat", "phpunit.xml.dist", "test.php", "test.bat", "build.xml"]
+        "exclude": ["/build", "/tests", "phpunit.xml.dist", "test.php", "test.bat", "build.xml"]
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.1.x-dev"
+            "dev-master": "1.x-dev"
         }
     }
 }

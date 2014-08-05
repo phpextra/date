@@ -1,12 +1,13 @@
 <?php
 
 namespace PHPExtra\Date;
+
 use Closure;
 use DateTime as StandardDateTime;
 use DateTimeZone;
 
 /**
- * DateTime
+ * The DateTime class
  *
  * @author Jacek Kobus <kobus.jacek@gmail.com>
  */
@@ -18,14 +19,14 @@ class DateTime extends StandardDateTime
     public static $now = null;
 
     /**
-     * Dafeault format
+     * Default format
      *
      * @var string
      */
     protected $defaultFormat = self::ISO8601;
 
     /**
-     * @param string $time
+     * @param string       $time
      * @param DateTimeZone $timezone
      */
     public function __construct($time = 'now', DateTimeZone $timezone = null)
@@ -61,21 +62,23 @@ class DateTime extends StandardDateTime
      * Returns 1 if given date is earlier, 0 is equal, -1 is later
      *
      * @param DateTime $date
+     *
      * @return int
      */
     public function compare(DateTime $date)
     {
-        if($this > $date){
+        if ($this > $date) {
             return 1;
-        }elseif($date > $this){
+        } elseif ($date > $this) {
             return -1;
-        }else{
+        } else {
             return 0;
         }
     }
 
     /**
      * @param DateTime $date
+     *
      * @return bool
      */
     public function equals(DateTime $date)
@@ -85,6 +88,7 @@ class DateTime extends StandardDateTime
 
     /**
      * @param DateTime $date
+     *
      * @return bool
      */
     public function isEarlier(DateTime $date)
@@ -94,6 +98,7 @@ class DateTime extends StandardDateTime
 
     /**
      * @param DateTime $date
+     *
      * @return bool
      */
     public function isLater(DateTime $date)
@@ -109,6 +114,16 @@ class DateTime extends StandardDateTime
     public function isToday()
     {
         return $this->format('zY') == DateTime::now()->format('zY');
+    }
+
+    /**
+     * Tells if current week day is Saturday or Sunday (Friday after 4PM is not a weekend)
+     *
+     * @return bool
+     */
+    public function isWeekend()
+    {
+        return $this->getDayOfWeek() > 5;
     }
 
     /**
@@ -136,6 +151,8 @@ class DateTime extends StandardDateTime
     }
 
     /**
+     * Get number of days in current month
+     *
      * @return string
      */
     public function getDaysInMonth()
@@ -144,6 +161,8 @@ class DateTime extends StandardDateTime
     }
 
     /**
+     * Day of the month without leading zeros
+     *
      * @return string
      */
     public function getDayOfMonth()
@@ -152,6 +171,8 @@ class DateTime extends StandardDateTime
     }
 
     /**
+     * ISO-8601 numeric representation of the day of the week (1 for Monday, 7 for Sunday)
+     *
      * @return string
      */
     public function getDayOfWeek()
@@ -160,19 +181,31 @@ class DateTime extends StandardDateTime
     }
 
     /**
+     * The day of the year (0 through 365)
+     *
      * @return string
      */
     public function getDayOfYear()
     {
-        return $this->format('Z');
+        return $this->format('z');
     }
 
     /**
+     * ISO-8601 week number of year, weeks starting on Monday
+     *
      * @return string
      */
     public function getWeekOfYear()
     {
         return $this->format('W');
     }
+
+//    public function addDays($amount)
+//    {
+//    }
+//
+//    public function addMinutes($amount){}
+//
+//    public function addSeconds($amount){}
 
 }

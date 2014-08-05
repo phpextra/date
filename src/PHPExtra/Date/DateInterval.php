@@ -52,7 +52,7 @@ class DateInterval extends \DateInterval
     }
 
     /**
-     * Create an @see DateInterval object from given amount of seconds.
+     * Create a DateInterval object from given amount of seconds.
      *
      * @param int $value
      * @return static
@@ -72,7 +72,7 @@ class DateInterval extends \DateInterval
     }
 
     /**
-     * Create an @see DateInterval object from given amount of minutes.
+     * Create a DateInterval object from given amount of minutes.
      *
      * @param int $value
      * @return static
