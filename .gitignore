@@ -1,5 +1,4 @@
 /vendor/
 .idea
-composer.lock
-/build/logs
-/build/coverage
+/build
+atlassian-ide-plugin.xml

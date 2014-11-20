@@ -15,7 +15,7 @@
         }
     },
     "require-dev": {
-        "phpextra/qa-tools": "~1.0"
+        "phpunit/phpunit": "~4.3"
     },
     "archive": {
         "exclude": ["/build", "/tests", "phpunit.xml.dist", "test.php", "test.bat", "build.xml"]
