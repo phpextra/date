@@ -60,4 +60,27 @@ class DateIntervalTest extends \PHPUnit_Framework_TestCase
             array(600000 , array('Y' => 0, 'm' => 0, 'd' => 6, 'h' => 22, 'i' => 40, 's' => 0)),
         );
     }
+
+    /**
+     * @dataProvider formatProvider
+     */
+    public function testCanFormatAsHours($minutes, $expected)
+    {
+        $interval = DateInterval::fromMinutes($minutes);
+
+        $formatted = $interval->formatHours();
+
+        $this->assertEquals($expected, $formatted);
+    }
+
+    public function formatProvider()
+    {
+        return array(
+            array(75, '1h15min'),
+            array(15, '15min'),
+            array(25, '25min'),
+            array(90, '1h30min'),
+            array(125, '2h5min')
+        );
+    }
 } 
